@@ -37,6 +37,17 @@ Things you may want to cover:
 - has_many :members
 - has_many :messages
 
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|group_name|string||
+
+### Association
+- has_many :users, through:members
+- has_many :members
+- has_many :messages
+
 * Database initialization
 
 * How to run the test suite
