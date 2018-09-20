@@ -24,6 +24,19 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, unique: true|
+|e-mail|string|null: false, unique: true|
+|password|string|null: false|
+
+### Association
+- has_many :groups through:members
+- has_many :members
+- has_many :messages
+
 * Database initialization
 
 * How to run the test suite
