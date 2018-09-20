@@ -48,6 +48,19 @@ Things you may want to cover:
 - has_many :members
 - has_many :messages
 
+## messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|text|string|null: false||
+|image|string||
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
 * Database initialization
 
 * How to run the test suite
