@@ -7,9 +7,9 @@
       .chat-side__user-name
         ユーザー名
       %a.chat-side__user--new-group{ :href => '#' }
-        n
+        %i.fa.fa-cog
       %a.chat-side__user--edit-user{ :href => '#' }
-        e
+        %i.fa.fa-pencil-square-o
   .chat-side__groups-list
     .chat-side__groups
       .chat-side__group
@@ -39,5 +39,8 @@
   .chat-main__footer
     %form.chat-main__footer-form
       %input.chat-main__footer-body{:name => "message", :placeholder => "type a message"}
+      %label.upload-label{for: "upload-icon"}
+        %i.fa.fa-picture-o.upload-icon
+          %input#upload-icon{:type => "file"}
       %button.submit-btn{:type => "submit"}
         Send
