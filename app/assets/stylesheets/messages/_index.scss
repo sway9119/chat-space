@@ -93,7 +93,7 @@
   .chat-main__body {
     margin: 0 40px;
     .chat-main__body--messages-list {
-      padding: 20px 0;
+      padding: 40px 0 0;
       .chat-main__messege-name {
         color: #434A54;
         font-size: 16px;
@@ -127,6 +127,14 @@
         color: #434A54;
         font-size: 16px;
         border: none;
+      }
+      .upload-icon {
+        position: absolute;
+        top: 35px;
+        right: 180px;
+      }
+      #upload-icon {
+        display: none;
       }
       .submit-btn {
         position: absolute;
