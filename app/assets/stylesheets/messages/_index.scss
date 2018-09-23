@@ -37,7 +37,12 @@
   }
   &__groups {
     .chat-side__group {
+      display: block;
       padding: 20px;
+      text-decoration: none;
+      &:hover {
+        background-color: #3f4e61;
+      }
       &-name {
         color: #fff;
         font-size: 15px;
