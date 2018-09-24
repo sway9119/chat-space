@@ -121,7 +121,7 @@
     position: fixed;
     bottom: 0;
     width: calc(100vw - #{$side-w});
-    background-color: #38AEF0;
+    background-color: #aaa;
     .chat-main__footer-form {
       margin: 0 40px;
       .chat-main__footer-body {
@@ -150,7 +150,7 @@
         background-color: #38AEF0;
         color: #fff;
         font-size: 16px;
-        border: solid 1px #fff;
+        border: none;
       }
     }
   }
