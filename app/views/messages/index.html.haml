@@ -1,0 +1,46 @@
+.notification
+  .notice
+    メッセージ送信成功
+.chat-side
+  .chat-side__user
+    .chat-side__user-content
+      .chat-side__user-name
+        ユーザー名
+      %a.chat-side__user--new-group{ :href => '#' }
+        %i.fa.fa-cog
+      %a.chat-side__user--edit-user{ :href => '#' }
+        %i.fa.fa-pencil-square-o
+  .chat-side__groups-list
+    .chat-side__groups
+      %a.chat-side__group{ :href => '#'}
+        .chat-side__group-name
+          雑談スレ１
+        .chat-side__group-message
+          ここは雑談をするスレッドとなります。
+.chat-main
+  .chat-main__header
+    .chat-main__header--group
+      .chat-main__header--group-name
+        グループ名
+      %a.chat-main__header--group-edit-btn
+        Edit
+    .chat-main__header--members
+      Members:
+  .chat-main__body
+    .chat-main__body--messages-list
+      .chat-main__messege-name
+        １ユーザー名
+      .chat-main__messege-time
+        2018/09/13 02:26:38
+      .chat-main__messege-body
+        サンプルテキストです。
+        %br
+        メッセージはここに表示されます。
+  .chat-main__footer
+    %form.chat-main__footer-form
+      %input.chat-main__footer-body{:name => "message", :placeholder => "type a message"}
+      %label.upload-label{for: "upload-icon"}
+        %i.fa.fa-picture-o.upload-icon
+          %input#upload-icon{:type => "file"}
+      %button.submit-btn{:type => "submit"}
+        Send
