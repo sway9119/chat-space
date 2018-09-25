@@ -38,9 +38,9 @@
         メッセージはここに表示されます。
   .chat-main__footer
     %form.chat-main__footer-form
-      %input.chat-main__footer-body{:name => "message", :placeholder => "type a message"}
+      %input.chat-main__footer-body{name: "message", placeholder: "type a message"}
       %label.upload-label{for: "upload-icon"}
         %i.fa.fa-picture-o.upload-icon
-          %input#upload-icon{:type => "file"}
-      %button.submit-btn{:type => "submit"}
+          %input#upload-icon{type: "file"}
+      %button.submit-btn{type: "submit"}
         Send
