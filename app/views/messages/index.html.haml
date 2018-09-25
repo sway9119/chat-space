@@ -6,13 +6,13 @@
     .chat-side__user-content
       .chat-side__user-name
         ユーザー名
-      %a.chat-side__user--new-group{ :href => '#' }
+      = link_to "#", class: "chat-side__user--new-group" do
         %i.fa.fa-cog
-      %a.chat-side__user--edit-user{ :href => '#' }
+      = link_to "#", class: "chat-side__user--edit-user" do
         %i.fa.fa-pencil-square-o
   .chat-side__groups-list
     .chat-side__groups
-      %a.chat-side__group{ :href => '#'}
+      = link_to "#", class: "chat-side__group" do
         .chat-side__group-name
           雑談スレ１
         .chat-side__group-message
@@ -22,7 +22,7 @@
     .chat-main__header--group
       .chat-main__header--group-name
         グループ名
-      %a.chat-main__header--group-edit-btn
+      = link_to "#", class: "chat-main__header--group-edit-btn" do
         Edit
     .chat-main__header--members
       Members:
