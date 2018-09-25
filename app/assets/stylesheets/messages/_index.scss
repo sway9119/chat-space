@@ -1,5 +1,5 @@
 .notification {
-  color: #fff;
+  color: $text-white;
   text-align: center;
   line-height: $notice-h;
   background-color: #00A070;
@@ -11,7 +11,7 @@
   bottom: 0;
   width: $side-w;
   padding-top: $head-h;
-  background-color: #2f3e51;
+  background-color: $gray;
   overflow: scroll;
   &__user {
     box-sizing: border-box;
@@ -22,16 +22,16 @@
     height: $head-h;
     font-size: 16px;
     font-weight: bold;
-    color: #fff;
+    color: $text-white;
     line-height: $head-h;
-    background-color: #253141;
+    background-color: $gray-dark;
     &-name {
       display: inline-block;
     }
     &--new-group, &--edit-user {
       float: right;
       margin: 0 5px;
-      color: #fff;
+      color: $text-white;
       text-decoration: none;
     }
   }
@@ -41,15 +41,15 @@
       padding: 20px;
       text-decoration: none;
       &:hover {
-        background-color: #3f4e61;
+        background-color: $gray-clear;
       }
       &-name {
-        color: #fff;
+        color: $text-white;
         font-size: 15px;
         margin-bottom: 5px;
       }
       &-message {
-        color: #fff;
+        color: $text-white;
         font-size: 11px;
       }
     }
@@ -70,7 +70,7 @@
     right: 0;
     width: calc(100vw - #{$side-w});
     border-bottom: 1px solid #eee;
-    background-color: #fff;
+    background-color: $text-white;
     .chat-main__header--group {
       overflow: hidden;
       margin: 0 40px;
@@ -81,16 +81,16 @@
         float: left;
       }
       .chat-main__header--group-edit-btn {
-        color: #38AEF0;
+        color: $blue;
         font-size: 15px;
         padding: 12.5px 20px;
         margin: 28px 0 0;
-        border: 1px solid #38AEF0;
+        border: 1px solid $blue;
         float: right;
       }
     }
     .chat-main__header--members {
-      color: #999;
+      color: $gray-light;
       font-size: 12px;
       margin: 0 40px 6px;
     }
@@ -100,19 +100,19 @@
     .chat-main__body--messages-list {
       padding: 40px 0 0;
       .chat-main__messege-name {
-        color: #434A54;
+        color: $text-black;
         font-size: 16px;
         font-weight: bold;
         float: left;
       }
       .chat-main__messege-time {
-        color: #999;
+        color: $gray-light;
         font-size: 12px;
         padding: 0 10px 10px;
         float: left;
       }
       .chat-main__messege-body {
-        color: #434A54;
+        color: $text-black;
         clear: both;
       }
     }
@@ -121,7 +121,7 @@
     position: fixed;
     bottom: 0;
     width: calc(100vw - #{$side-w});
-    background-color: #aaa;
+    background-color: $gray-light;
     .chat-main__footer-form {
       margin: 0 40px;
       .chat-main__footer-body {
@@ -129,7 +129,7 @@
         padding: 15px 10px;
         width: calc( 100% - 140px );
         height: 20px;
-        color: #434A54;
+        color: $text-black;
         font-size: 16px;
         border: none;
       }
@@ -147,8 +147,8 @@
         right: 40px;
         width: 100px;
         height: 50px;
-        background-color: #38AEF0;
-        color: #fff;
+        background-color: $blue;
+        color: $text-white;
         font-size: 16px;
         border: none;
       }
