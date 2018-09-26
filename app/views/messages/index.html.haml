@@ -1,0 +1,46 @@
+.notification
+  .notice
+    メッセージ送信成功
+.chat-side
+  .chat-side__user
+    .chat-side__user-content
+      .chat-side__user-name
+        ユーザー名
+      = link_to "#", class: "chat-side__user--new-group" do
+        = fa_icon "cog"
+      = link_to "#", class: "chat-side__user--edit-user" do
+        = fa_icon "pencil-square-o"
+  .chat-side__groups-list
+    .chat-side__groups
+      = link_to "#", class: "chat-side__group" do
+        .chat-side__group-name
+          雑談スレ１
+        .chat-side__group-message
+          ここは雑談をするスレッドとなります。
+.chat-main
+  .chat-main__header
+    .chat-main__header--group
+      .chat-main__header--group-name
+        グループ名
+      = link_to "#", class: "chat-main__header--group-edit-btn" do
+        Edit
+    .chat-main__header--members
+      Members:
+  .chat-main__body
+    .chat-main__body--messages-list
+      .chat-main__messege-name
+        １ユーザー名
+      .chat-main__messege-time
+        2018/09/13 02:26:38
+      .chat-main__messege-body
+        サンプルテキストです。
+        %br
+        メッセージはここに表示されます。
+  .chat-main__footer
+    %form.chat-main__footer-form
+      %input.chat-main__footer-body{name: "message", placeholder: "type a message"}
+      %label.upload-label{for: "upload-icon"}
+        = fa_icon "picture-o", class: "upload-icon" do
+          %input#upload-icon{type: "file"}
+      %button.submit-btn{type: "submit"}
+        Send
