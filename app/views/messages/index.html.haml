@@ -1,25 +1,11 @@
-.chat-side
-  .chat-side__user
-    .chat-side__user-content
-      .chat-side__user-name
-        ユーザー名
-      = link_to edit_user_path(current_user), class: 'chat-side__user--new-group' do
-        = fa_icon 'cog'
-      = link_to "#", class: 'chat-side__user--edit-user' do
-        = fa_icon "pencil-square-o"
-  .chat-side__groups-list
-    .chat-side__groups
-      = link_to "#", class: "chat-side__group" do
-        .chat-side__group-name
-          雑談スレ１
-        .chat-side__group-message
-          ここは雑談をするスレッドとなります。
+= render partial: 'shared/side_bar', locals: { group: @group }
+
 .chat-main
   .chat-main__header
     .chat-main__header--group
       .chat-main__header--group-name
-        グループ名
-      = link_to "#", class: "chat-main__header--group-edit-btn" do
+        = @group.name
+      = link_to edit_group_path(@group.id), class: 'chat-main__header--group-edit-btn' do
         Edit
     .chat-main__header--members
       Members:
