@@ -1,0 +1,52 @@
+.chat-side {
+  position: fixed;
+  top: $notice-h;
+  left: 0;
+  bottom: 0;
+  width: $side-w;
+  padding-top: $head-h;
+  background-color: $gray;
+  overflow: scroll;
+  &__user {
+    box-sizing: border-box;
+    position: fixed;
+    top: $notice-h;
+    padding: 0 20px;
+    width: $side-w;
+    height: $head-h;
+    font-size: 16px;
+    font-weight: bold;
+    color: $text-white;
+    line-height: $head-h;
+    background-color: $gray-dark;
+    &-name {
+      display: inline-block;
+    }
+    &--new-group, &--edit-user {
+      float: right;
+      margin: 0 5px;
+      color: $text-white;
+      text-decoration: none;
+    }
+  }
+  &__groups {
+    .chat-side__group {
+      display: block;
+      padding: 20px;
+      text-decoration: none;
+      &:hover {
+        background-color: $gray-clear;
+      }
+      &-name {
+        color: $text-white;
+        font-size: 15px;
+        margin-bottom: 5px;
+        border: none;
+      }
+      &-message {
+        color: $text-white;
+        font-size: 11px;
+      }
+    }
+  }
+}
