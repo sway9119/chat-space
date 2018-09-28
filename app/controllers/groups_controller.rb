@@ -3,6 +3,7 @@ class GroupsController < ApplicationController
 
   def index
     @user = current_user
+    flash[:notice] = "ようこそ、chat space へ。 本日は#{Date.today}です。"
   end
 
   def new
@@ -15,6 +16,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to root_path, notice: 'グループを作成しました'
     else
+      flash[:notice] = "エラーが発生しました。"
       render :new
     end
   end
@@ -23,6 +25,7 @@ class GroupsController < ApplicationController
     if @group.update(group_params)
       redirect_to group_messages_path(@group), notice: 'グループを編集しました'
     else
+      flash[:notice] = "エラーが発生しました。"
       render :edit
     end
   end
