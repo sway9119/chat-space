@@ -10,20 +10,12 @@
     .chat-main__header--members
       Members:
   .chat-main__body
-    .chat-main__body--messages-list
-      .chat-main__messege-name
-        １ユーザー名
-      .chat-main__messege-time
-        2018/09/13 02:26:38
-      .chat-main__messege-body
-        サンプルテキストです。
-        %br
-        メッセージはここに表示されます。
+    = render partial: 'message', collection: @messages
+
   .chat-main__footer
-    %form.chat-main__footer-form
-      %input.chat-main__footer-body{name: "message", placeholder: "type a message"}
-      %label.upload-label{for: "upload-icon"}
-        = fa_icon "picture-o", class: "upload-icon" do
-          %input#upload-icon{type: "file"}
-      %button.submit-btn{type: "submit"}
-        Send
+    = form_for [@group, @message], html: {class: 'chat-main__footer-form'} do |f|
+      = f.text_field :content, class: 'chat-main__footer-body', placeholder: 'type a message'
+      = f.label :image, class: 'upload-icon' do
+        = fa_icon 'picture-o'
+        = f.file_field :image, class: 'none'
+      = f.submit 'Send', class: 'submit-btn'
