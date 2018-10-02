@@ -2,7 +2,7 @@
   .chat-side__user
     .chat-side__user-content
       .chat-side__user-name
-        = @user.name
+        = current_user.name
       = link_to edit_user_path(current_user), class: 'chat-side__user--new-group' do
         = fa_icon 'cog'
       = link_to new_group_path, class: 'chat-side__user--edit-user' do
@@ -14,4 +14,4 @@
           .chat-side__group-name
             = group.name
           .chat-side__group-message
-            メッセージはまだありません。
+            = group.show_last_message

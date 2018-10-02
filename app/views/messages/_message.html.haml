@@ -1,0 +1,10 @@
+.chat-main__body--messages-list
+  .chat-main__messege-name
+    = message.user.name
+  .chat-main__messege-time
+    = format_posted_time(message.created_at)
+  .chat-main__messege-body
+  - if message.content.present?
+    %p.chat-main__message-content
+      = message.content
+  = image_tag message.image.url, class: 'chat-main__message-image' if message.image.present?
