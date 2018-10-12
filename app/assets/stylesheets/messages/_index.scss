@@ -63,6 +63,9 @@
       .chat-main__messege-body {
         color: $text-black;
         clear: both;
+        .chat-main__message-image {
+          width: 400px;
+        }
       }
     }
   }
