@@ -8,6 +8,13 @@ $(function(){
                 </div>`
     result.append(html);
   }
+  function appendNoUser(text) {
+    var html = `<div class='chat-group-user clearfix'>${text}</div>`
+    result.append(html);
+   }
+
+
+
 
 
   $("#user-search-field").on("keyup", function() {
