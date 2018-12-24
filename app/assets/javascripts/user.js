@@ -22,8 +22,10 @@ $(function(){
     userList.append(html);
   }
 
+  console.log('コメント');
 
   $("#user-search-field").on("keyup", function() {
+    console.log('keyup');
     var input = $("#user-search-field").val();
     $.ajax({
       type: 'GET',
@@ -48,6 +50,7 @@ $(function(){
     });
 
   $(document).on("click", ".chat-group-user__btn--add", function(){
+    console.log('btn--add');
     var user_id = $(this).attr('data-user-id');
     var user_name = $(this).attr('data-user-name');
 
@@ -57,5 +60,4 @@ $(function(){
   $(document).on("click", ".js-remove-btn",function(){
     $(this).parent().remove();
   });
-
 });

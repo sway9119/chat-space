@@ -50,22 +50,22 @@ $(function(){
   var interval = setInterval(function() {
     var last_id = $('.chat-main__body--messages-list:last').data('id')
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-   $.ajax({
+  $.ajax({
     url: location.href.json,
     data: {last_id: last_id },
     dataType: 'json'
-  })
-  .done(function(addmessages) {
-    addmessages.forEach(function(message) {
-      if (message.id > last_id ) {
-        insertHTML(message)
-      }
-      scrollend();
+    })
+    .done(function(addmessages) {
+      addmessages.forEach(function(message) {
+        if (message.id > last_id ) {
+          insertHTML(message)
+        }
+        scrollend();
+      });
+    })
+    .fail(function(data) {
+      alert('自動更新に失敗しました');
     });
-  })
-  .fail(function(data) {
-    alert('自動更新に失敗しました');
-  });
   } else {
   clearInterval(interval);
 }}, 5000 );
